@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.Azul{
+    background-color: #078DF2;
+}
+
+header {
+    background-color: #078DF2;
+    width: 100%;
+    position: fixed ;
+    height: 4em;    
+    z-index: 10;
+    
+}
+
+#logoMenu {
+    position: absolute;
+    left: 15%;
+    display: inline-block;
+    padding-top: 0.82em;
+
+}
+
+#logoMenu img {
+    height: 3em;
+}
+
+#usuario {
+    position: absolute;
+    display: inline-block;
+    right: 15%;
+    padding: 0.78em 0.75em;
+}
+
+#contenedorDatos {
+    margin: 0% 20%;
+    padding-top: 4.5em;
+    z-index: 0;
+}

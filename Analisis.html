@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisis</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="AnalisisStyle.css">
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- docReady function, which allows us to run javascript when DOM is ready -->
+    <script src="Grafica/docready.js"></script>
+
+    <!-- my JavaScript code, which adds the charts to 'container' using highcharts -->
+    <script src="Grafica/charts.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div id="menu">
+            <div id="logoMenu"><img src="img/LogoCompletoRec.png" alt="LogoCompleto"></div>
+            <div id="usuario"><h3>Usuario</h3></div>
+            
+        </div>
+    </header>
+
+    <div id="contenedorDatos">
+        <div id="Opciones">
+            <h2>Análisis</h2>
+            <div id="intervaloTiempo">
+                <div class="contenedorTiempo Inicio">
+                    <label for="fechaInicio" class="labelFecha">Fecha Inicio</label>
+                    <input type="date" name="fechaInicio" id="fechaInicio" class="inputFecha">
+                </div>
+                <div class="contenedorTiempo Fin">
+                    <label for="fechaFin" class="labelFecha">Fecha Fin</label>
+                    <input type="date" name="fechaFin" id="fechaFin" class="inputFecha">
+                </div>
+                <div class="contenedorTiempo Categoria">
+                    <label for="categoria" class="labelFecha">Categorias</label>
+                    <select name="Categorias" id="Categorias" class="inputFecha">
+                        <option value="default" selected>Default</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                    Gastos en los últimos doce meses, separado por tipo de gasto.
+                </p>
+            </figure>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
