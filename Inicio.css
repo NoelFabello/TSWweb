@@ -1,8 +1,7 @@
 body{
     background: whitesmoke;
-    margin: 0;
     font-family: 'Roboto', sans-serif;
-
+    margin: 0px;
 }
 
 header {
@@ -82,26 +81,33 @@ button h3{
 }
 
 #estructura {
-    margin: 0% 20%;
-    padding-top: 5%;
-    z-index: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
 }
 
+#contentEstructura {
+    background: lightgrey;
+    display: flex;
+    border-radius: 2%;
+}
+
 #textoEstructura{
-    border-radius: 1%;
-    margin-right: 20%;
+    margin-right: 5%;
     padding: 5%;
     display: inline;
-    background: lightgrey;
+}
+
+#divImagenEstructura{
+    display: inline;
+    padding: 15px;
 }
 
 #ImagenEstructura{
-    border-radius: 1%;
-    padding: 5%;
-    display: inline;
-    background: lightgrey;
-    padding: 30px;
+    height: 100%;
 }
 
 
