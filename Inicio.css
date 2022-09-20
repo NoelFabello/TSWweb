@@ -2,10 +2,11 @@ body{
     background: whitesmoke;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    margin-bottom: 70px;
 }
 
 header {
-    background: whitesmoke;
+    background: white;
     width: 100%;
     position: fixed ;
     height: 4em;    
@@ -56,6 +57,8 @@ header {
 button h3{
     margin: 0.5em 0.25em;
 }
+
+
 /*
 #sesionMenu button:hover {
     background-color: #945DAE;
@@ -90,24 +93,32 @@ button h3{
 }
 
 #contentEstructura {
-    background: lightgrey;
+    background: white;
+    height: 600px;
     display: flex;
     border-radius: 2%;
+    box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.6);
 }
 
 #textoEstructura{
+    align-self: center;
     margin-right: 5%;
     padding: 5%;
     display: inline;
 }
 
-#divImagenEstructura{
-    display: inline;
-    padding: 15px;
+#textoEstructura h1{
+    max-height: 50%;
+    color: #078DF2;
+    font-weight: bolder;
 }
 
-#ImagenEstructura{
-    height: 100%;
+#divImagenEstructura{
+    align-self: center;
+    display: inline;
+    padding: 15px;
+    max-width: 50%;
+
 }
 
 
@@ -116,7 +127,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 70px;
 
     background-color: #1671b8;
 
