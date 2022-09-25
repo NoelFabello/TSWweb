@@ -1,24 +1,90 @@
+html {
+    margin: 0px;
+    height: 100%;
+}
+
 body{
+    height: 100%;
     background: whitesmoke;
     font-family: 'Roboto', sans-serif;
+    font-size: 10px;
     margin: 0px;
-    margin-bottom: 70px;
+    
+    
+    display: grid;
+
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+    ;
 }
 
+/*********Header*********/
 header {
+    grid-area: header;
+
     background: white;
     width: 100%;
-    position: fixed ;
-    height: 4em;    
-    z-index: 10;
+    height: 40px;
+
+    /*Si queremos fijar el header
+    position: sticky;
+    top:0;
+    */
 }
 
-.separador {
-    margin-top: 3.8em;
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    margin-left: 10px;
+    margin-top: 7px;
+    
+}
+
+#logo img {
+    height: 30px;
+    
+}
+
+#sesionMenu{
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+#sesionMenu button{
+    border: none;
+    border-radius: 50px;
+
+}
+button h3{
+    margin: 8px 4px;
+    font-size: 10px;
+}
+
+#iniciarSesion{
+    background: none;
+    color: grey;
+}
+#iniciarSesion :hover{
+    color: #078DF2;
+}
+
+#registrarse{
+    background-color: #078DF2;
+    color: white;
+}
+#registrarse:hover{
+    background-color: #1671b8;
+}
+
+.separador{
     overflow: hidden;
     height: 20px;
 }
-
 .separador:after {
     content: '';
     display: block;
@@ -29,109 +95,173 @@ header {
     box-shadow: 0px 0px 8px rgba(0,0,0,.6);
 }
 
-#logoMenu {
-    position: absolute;
-    left: 15%;
-    display: inline-block;
-    padding-top: 0.5em;
+/**********footer*********/
 
-}
-
-#logoMenu img {
-    height: 3em;
-}
-
-#sesionMenu{
-    position: absolute;
-    display: inline-block;
-    right: 15%;
-    padding: 0.78em 0.75em;
-}
-
-#sesionMenu button{
-    display: inline;
-    border: 0px solid white;
-    border-radius: 50px;
-
-}
-button h3{
-    margin: 0.5em 0.25em;
-}
-
-
-/*
-#sesionMenu button:hover {
-    background-color: #945DAE;
-    color: white;
-}
-*/
-#iniciarSesion{
-    background: none;
-    color: grey;
-    
-}
-#iniciarSesion :hover{
-    color: #078DF2;
-}
-
-#registrarse{
-    background-color: #078DF2;
-    color: white;
-}
-
-#registrarse:hover{
+footer{
+    grid-area: footer;
+    margin-bottom: 0px;
+    margin-top: auto;
+    width: 100%;
+    height: 100px;
     background-color: #1671b8;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-#estructura {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
+#footerLogo img{
+    height: 30px;
+}
+
+#footerLogo {
+    width: 170px;
+    margin: 10px 10px;
+}
+
+#footerNombres{
+    margin: 10px 10px;
+    align-content: center;
+}
+
+
+/*******Content*******/
+
+#estructura{
+    grid-area: content;
+    
+    
 }
 
 #contentEstructura {
-    background: white;
-    height: 600px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 30px 20px;
+    text-align: center;
+
+    background: white;
     border-radius: 2%;
     box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.6);
 }
 
-#textoEstructura{
-    align-self: center;
-    margin-right: 5%;
-    padding: 5%;
-    display: inline;
+#contentEstructura h3 {
+    color: grey;
 }
 
-#textoEstructura h1{
-    max-height: 50%;
+#contentEstructura h5 {
+    font-weight: lighter;
+}
+
+
+#textoContent{
+    align-self: center;
+    margin: 0 5px;
+}
+#textoContent h1{
+    font-size: 20px;
     color: #078DF2;
-    font-weight: bolder;
 }
 
-#divImagenEstructura{
+#contentEstructura img{
     align-self: center;
-    display: inline;
-    padding: 15px;
-    max-width: 50%;
+
+    max-width: 300px;
+    margin: 0 0px;
 
 }
 
 
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
+/* Small devices (tablets, 768px and up) */
+/* container width: 750 */
+@media (min-width: 768px) {
+    body {
+      font-size: 25px;
+      background-color: red;
+    }
 
-    background-color: #1671b8;
+    header{
+        height: 65px;
+    }
 
-    text-align: center;
-    z-index: 100;
+    #menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #logo{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    
+    #logo img {
+        height: 50px;
+    }
+    
+    #sesionMenu{
+        margin-top: 15px;
+        margin-right: 30px;
+    }
+    
+    button h3{
+        font-size: 20px;
+    }
+
+    #estructura{
+        margin: auto;
+                
+    }
+
+    #contentEstructura {
+        margin: 30px;
+        padding: 30px;
+        height: auto;
+
+    }
+    #textoContent h1{
+        font-size: 40px;
+
+    }
+
+    #contentEstructura img{
+        max-width: 700px;
+    
+    }
+
+    footer{
+        height: 150px;
+        font-size: 18px;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #footerLogo img{
+        height: 50px;
+    }
+    
+    #footerLogo {
+        width: 170px;
+        margin: 15px 30px;
+    
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* container width: 970 */
+@media (min-width: 992px) {
+    body {
         
+        background-color: yellow;
+    }
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+/* container width: 1170px */
+@media (min-width: 1200px) {
+    body {
+        
+        background-color: green;
+    }
+
 }
