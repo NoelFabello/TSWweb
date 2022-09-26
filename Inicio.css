@@ -12,18 +12,12 @@ body{
     color: #424346;
     
     
-    display: grid;
-
-    grid-template-areas:
-        "header"
-        "content"
-        "footer"
-    ;
+    display: flex;
+    flex-direction: column;
 }
 
 /*********Header*********/
 header {
-    grid-area: header;
     background: white;
     width: 100%;
     height: 60px;
@@ -98,7 +92,6 @@ button h3{
 /**********footer*********/
 
 footer{
-    grid-area: footer;
     margin-bottom: 0px;
     margin-top: auto;
     width: 100%;
@@ -126,13 +119,8 @@ footer{
 
 /*******Content*******/
 
-#estructura{
-    grid-area: content;
-}
 
 #contentEstructura {
-
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
@@ -141,6 +129,16 @@ footer{
     background: white;
     border-radius: 2%;
     box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.6);
+
+    display: grid;
+    grid-template-areas: 
+        "tituloContent"
+        "graficaTexto"
+        "imagenGrafica"
+        "tablaTexto"
+        "imagenTabla"
+        ;
+
 }
 
 #contentEstructura h3 {
@@ -158,18 +156,38 @@ footer{
 
 
 #textoContent{
+    grid-area: tituloContent;
     align-self: center;
     margin: 0 5px;
 }
 
 #textoContent h1{
-    font-size: 20px;
+    font-size: 25px;
     color: #078DF2;
 }
 
+#GraficaTexto{
+    grid-area: graficaTexto;
+}
+
+#TablaTexto{
+    grid-area: tablaTexto;
+
+}
+
 #contentEstructura img{
+    margin-right: auto;
+    margin-left: auto;
     width: 80%;
     align-self: center;
+}
+
+#ImagenGrafica{
+    grid-area: imagenGrafica;
+}
+
+#ImagenTabla{
+    grid-area: imagenTabla;
 }
 
 
@@ -178,11 +196,11 @@ footer{
 @media (min-width: 768px) {
     body {
       background-color: red;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     #textoContent h1{
-        font-size: 50px;
+        font-size: 35px;
         color: #078DF2;
     }
 
@@ -203,8 +221,30 @@ footer{
 /* container width: 970 */
 @media (min-width: 992px) {
     body {
-        
         background-color: yellow;
+        font-size: 25px;
+    }
+    
+    #textoContent h1{
+        font-size: 50px;
+    }
+
+    #contentEstructura{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+        grid-template-areas: 
+        "tituloContent tituloContent tituloContent tituloContent tituloContent"
+        ". graficaTexto imagenGrafica imagenGrafica ."
+        ". imagenTabla imagenTabla tablaTexto ."
+        ;
+    }
+
+
+    #contentEstructura h5{
+        max-width: 80%;
+        font-size: 30px;
     }
 
 
@@ -215,7 +255,19 @@ footer{
 @media (min-width: 1200px) {
     body {
         
-        background-color: green;
+        background-color: whitesmoke;
+    }
+
+    #contentEstructura{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 2fr 3fr 3fr 3fr 2fr;
+        grid-template-areas: 
+        "tituloContent tituloContent tituloContent tituloContent tituloContent"
+        ". graficaTexto imagenGrafica imagenGrafica ."
+        ". imagenTabla imagenTabla tablaTexto ."
+        ;
     }
 
 }
